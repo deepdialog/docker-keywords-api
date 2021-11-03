@@ -1,0 +1,4 @@
+harvesttext==0.8.1.4
+starlette==0.16.0
+uvicorn==0.15.0
+fastapi==0.70.0
