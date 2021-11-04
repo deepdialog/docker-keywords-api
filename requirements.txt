@@ -1,4 +1,5 @@
-harvesttext==0.8.1.4
-starlette==0.16.0
-uvicorn==0.15.0
-fastapi==0.70.0
+harvesttext==0.8.1.*
+starlette==0.16.*
+uvicorn==0.15.*
+fastapi==0.70.*
+keybert==0.5.*
