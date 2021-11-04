@@ -42,6 +42,7 @@ async def get_orc(request: Request):
     res = en_model.extract_keywords(data['text'],
                                     keyphrase_ngram_range=(1, 3),
                                     top_n=data.get('topk', 4))
+    res = [item[0] for item in res]
     return {
         'ok': True,
         'data': res
@@ -49,4 +50,4 @@ async def get_orc(request: Request):
 
 if __name__ == "__main__":
     uvicorn.run(app="main:app", host="0.0.0.0",
-                port=12930, reload=True, debug=True)
+                port=8000, reload=True, debug=True)
