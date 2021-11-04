@@ -23,4 +23,4 @@ algorithm to correctly determine the class labels for unseen instances. This req
 the learning algorithm to generalize from the training data to unseen situations in a 
 'reasonable' way (see inductive bias).
 """
-en_model.extract_keywords(text, 4)
+en_model.extract_keywords(text, keyphrase_ngram_range=(1, 3), top_n = 4)
