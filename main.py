@@ -40,7 +40,7 @@ async def get_orc(request: Request):
 
     data = await request.json()
     res = en_model.extract_keywords(data['text'],
-                                    keyphrase_ngram_range=(1, 3),
+                                    keyphrase_ngram_range=(1, 2),
                                     top_n=data.get('topk', 4))
     res = [item[0] for item in res]
     return {
