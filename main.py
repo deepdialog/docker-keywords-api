@@ -23,6 +23,7 @@ async def get_orc(request: Request):
     data = await request.json()
     res = extract_kws_zh(data['text'], kw_model,
                          top_n=data.get('topk', 4))
+    res = [item[0] for item in res]
     return {
         'ok': True,
         'data': res
@@ -30,7 +31,7 @@ async def get_orc(request: Request):
 
 
 @app.post('/api/kw-extr-en')
-async def get_orc(request: Request):
+async def get_kw(request: Request):
     """
     curl -XPOST http://localhost:8000/api/kw-extr-en \
         -H 'Content-Type: applicaton/json' \
